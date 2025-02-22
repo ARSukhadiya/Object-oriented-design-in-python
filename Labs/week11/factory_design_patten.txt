@@ -1,0 +1,69 @@
+Factory design pattern
+
+Normal object creation
+myapp.py
+obj = Computer()
+obj2 = Radio()
+
+-> introduced dependency
+means myapp depends Computer and Radio Class
+
+Factory Pattern
+typw = input("Enter product type: ")
+obj = ProductFactory.get_product(type)
+
+Types of Factory Pattern
+========================
+1) Basic Factory pattern
+2) Factory Method pattern
+    
+3) Abstract Factory pattern
+    - A factory of factories.
+    - A factory of creating a family of related objects
+
+Factory Method pattern
+======================
+class Store:
+    def order(self, info):
+        # preparing the order
+        obj = create_product(info)
+        basic_price = obj.get_price()
+        ...
+
+    @abstractmethod
+    def create_product(self) -> Product:
+        pass
+
+class ComputerStore(Store):
+    def create_product(self, info) -> Product:
+        return Computer(info)
+
+class FurnitureStore(Store):
+    def create_product(self, info) -> Product:
+        return Table(info)
+
+
+Abstract Factory pattern
+========================
+
+class DatabaseFactory(ABC):
+    def create_connection(self) -> Connection:
+        pass
+    
+    def create_query(self) -> Query:
+        pass
+
+    def create_cursor(self) -> Cursor:
+        pass
+
+
+class OracleDatabaseFactory(DatabaseFactory):
+    def create_connection(self) -> Connection:
+        return OracleConnection()
+    
+    def create_query(self) -> Query:
+        return OracleQuery()
+
+    def create_cursor(self) -> Cursor:
+        return OracleCursor()
+

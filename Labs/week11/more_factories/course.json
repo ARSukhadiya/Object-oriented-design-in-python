@@ -1,0 +1,23 @@
+[
+    {
+        "firstName": "Peter",
+        "lastName": "Lee",
+        "age": 21,
+        "gpa": 4.0,
+        "gender": "male"
+    },
+    {
+        "firstName": "Lily",
+        "lastName": "Wu",
+        "age": 22,
+        "gpa": 3.8,
+        "gender": "female"
+    },
+    {
+        "firstName": "Carl",
+        "lastName": "Buck",
+        "age": 25,
+        "gpa": 3.0,
+        "gender": "male"
+    }
+]

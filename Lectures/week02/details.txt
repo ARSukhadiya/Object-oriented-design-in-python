@@ -1,0 +1,46 @@
+Class Implementation
+
+=================================================================
+To implement some built-in function
+
+    1) __init__()
+        # To define and initialize attributes
+        # when creating a new object, it's called automatically
+        Ex: 
+            s = Student("Peter")        -> __init__() is called
+
+    2) __str__()
+        # Returns a string representation of the object
+        # when is it called?
+        ex:
+            print(obj)          -> str(obj) -> __str__()
+            str(obj)
+
+    3> __repr__()
+        # Returns a string representation of the obj
+        # when is it called?
+        when prining a list of objects
+        ex: 
+            a = [obj1, obj2, obj3]
+            print(a)
+
+    4) __eq__()
+        # To compare 2 objects' contents
+        # when is it called?
+        operator ==, !=, in
+        ex: 
+            a = [obj1, obj2, obj3]
+            if obj in a:
+
+            a.remove(obj)
+
+=================================================================
+Class relationship Implementation
+
+(1) Composition (part of, strong)
+class Person:
+    def __init__(self, name, hand):
+        self.__name = name
+        # should component object inside for Composition
+        self.__hand = 
+    
